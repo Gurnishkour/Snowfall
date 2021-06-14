@@ -29,21 +29,20 @@ function setup() {
   girl = createSprite(250,350,10,10);
   girl.addImage("standing",girlimg);
 
-  snow1 = new Snow(150,150);
-  snow2 = new Snow(300,200);
-  snow3 = new Snow(450,150);
-  snow4 = new Snow(550,200);
+  snow1 = new Snow(150,150,30,30);
+  snow2 = new Snow(300,200,30,30);
+  snow3 = new Snow(450,150,30,30);
+  snow4 = new Snow(550,200,30,30);
  }
 
 
 function draw() {
  // background(255,255,255);  
+ Engine.update(myengine);
 
  if(bgimg){
   background (bgimg)
  }
-
- Engine.update(myengine);
 
  girl.scale=0.5;
  girl.velocityX=4;
